@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    
+</head>
+<body>
+    <section id="side">
+        <div class="header">
+           <div><h1>Flexbox Froggy</h1></div>
+        <div id="level-counter" class="all">
+            <span class="arrow left">
+              <span class="triangle"></span>
+            </span>
+          
+            <span id="level-indicator">
+              <span id="labelLevel" class="translate">Level</span>
+              <span class="current">1</span>
+              <span id="labelOf" class="translate">of</span>
+              <span class="total">1</span>
+              <span class="caret">▾</span>
+            </span>
+
+            <span class="arrow right">
+              <span class="triangle"></span>
+            </span>
+      </div>
+    </div> 
+    <div id="text">
+      <p class="Welcome">Welcome to Flexbox Froggy,a game where you help Froggy 
+        and friends by writing CSS code! Guide this frog to the lilypad  </p>
+      <li class="dot">flex-start: Items align to the left side of the container.</li>
+      <li class="dot">flex-end: Items align to the right side of the container.</li>
+      <li class="dot">center: Items align at the center of the container.</li>
+    <p>For example, justify-content: flex-end; will move the frog to the right.</p>
+    </div>
+    <p id="instructions"></p>
+    <div id="editor">
+      <div id="css">
+        <div class="numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</div>
+      </div>
+      <button id="next" class="click">Next</button><br>
+      
+      <span id="settings">
+        <span id="labelSettings" class="toggle translate" onclick="toggleSettings()">Settings</span>
+        <span class="tooltip" style="display: block;">
+          <section>
+            <h4 id="labelLanguage" class="translate">Language</h4>
+            <select id="language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</optio>
+            </select>
+          </section>
+          <section>
+            <h4 id="labelDifficulty" class="translate">Difficulty</h4>
+            <form id="difficulty">
+              <div>
+                <input type="radio" name="difficulty" id="difficultyEasy" value="easy" checked="">
+                <label id="labelDifficultyEasy" for="difficultyEasy" class="translate">Beginner</label>
+              </div>
+              <div>
+                <input type="radio" name="difficulty" id="difficultyMedium" value="medium">
+                <label id="labelDifficultyMedium" for="difficultyMedium" class="translate">Intermediate - No Directions</label>
+              </div>
+              <div>
+                <input type="radio" name="difficulty" id="difficultyHard" value="hard">
+                <label id="labelDifficultyHard" for="difficultyHard" class="translate">Expert - No Directions &amp; Random Levels</label>
+              </div>
+            </form>
+          </section>
+          <section>
+            <h4 id="labelColorblind" class="translate">Colorblind Mode</h4>
+            <form id="colorblind">
+              <div>
+                <div>
+                  <input type="radio" name="colorblind" id="colorblindOff" value="false" checked="">
+                  <label id="labelColorblindOff" for="colorblindOff" class="translate">Off</label>
+                </div>
+                <div>
+                  <input type="radio" name="colorblind" id="colorblindOn" value="true">
+                  <label id="labelColorblindOn" for="colorblindOn" class="translate">On</label>
+                </div>
+            
+          </div></form></section>
+        </span>
+      </span>
+    
+      <div class="frog-img">
+        <div class="pop">
+           <img class="frog-size" src="frog.png">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
