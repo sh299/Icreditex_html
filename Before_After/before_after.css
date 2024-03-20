@@ -1,0 +1,62 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 5px 10px 18px #dae88a;
+    position: relative; /* Required for positioning pseudo-elements */
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  @keyframes example {
+  0%   {background-color: lightpink;}
+  25%  {background-color: rgba(237, 237, 152, 0.167);}
+  50%  {background-color: rgba(202, 202, 249, 0.215);}
+  100% {background-color: rgba(0, 128, 0, 0.18);}
+} 
+
+  .container:before {
+    content: "Date:19-03-2024";
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    display: block;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 2px 2px #f056bd ;
+  }
+
+  .container:after {
+    content: "submit";
+    position: absolute;
+    bottom: 10px;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 30px;
+    background-color: #f056bd;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+    font-size: larger;
+  }
+
+  h1 {
+    text-align: center;
+    color: #efecec;
+    text-shadow: 2px 2px #3498db;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.6;
+  }

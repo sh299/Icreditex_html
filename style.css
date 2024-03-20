@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: #43A047;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: #D5D5D5;
+  font-size: xx-large;
+  font-family: fantasy;
+  margin-left: 20px; /* Adjust as needed */
+}
+
+#level-counter {
+  display: inline-block;
+  height: 30px;
+  margin-top: 0.5rem;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.all {
+  position: relative;
+  left: 70%;
+}
+
+.arrow.left {
+  border-right: 1px solid rgba(232, 219, 219, 0.776);
+  border-radius: 4px 0 0 4px;
+}
+
+.arrow.right {
+  border-left: 1px solid rgba(232, 219, 219, 0.779);
+  border-radius: 0 4px 4px 0;
+}
+
+.arrow.left:not(.disabled):hover,
+.arrow.right:not(.disabled):hover {
+  border-color: transparent;
+}
+
+.arrow.disabled {
+  opacity: 0.5;
+}
+
+.triangle {
+  display: inline-block;
+  width: 10px;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: relative;
+  top: 7px;
+}
+
+.left .triangle {
+  border-right: 12px solid rgba(255, 255, 255, 0.7);
+}
+
+.right .triangle {
+  border-left: 12px solid rgba(255, 255, 255, 0.7);
+}
+
+#level-indicator:hover,
+.arrow:not(.disabled):hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#level-indicator,
+.arrow {
+  float: left;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#level-indicator {
+  display: inline-block;
+  width: 160px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.box {
+  width: 600px;
+  border: 15px;
+  padding: 50px;
+  margin: 20px;
+  height: 250px;
+  background-color: rgba(245, 231, 231, 0.886);
+}
+
+#text{
+  color: aliceblue;
+  position: relative;
+  left: 5%;
+}
+#editor{
+  height: 200px;
+  width: 500px;
+  position: relative;
+  bottom: -20%;
+  left: 10%;
+  background-color: rgba(235, 241, 245, 0.906);
+  text-align: center;
+  border-radius: 5px;
+ }
+ #css{
+  height: 200px;
+  width: 6%;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.562);
+ }
+#next{
+  height: 30px;
+  width: 60px;
+  border: none;
+  background-color: rgba(245, 120, 120, 0.747);
+  color: white;
+}
+.click{
+  position: relative;
+  top: -20%;
+  left: 40%;
+}
+
+.pop{
+  position: absolute;
+  top: -170%;
+  left: 150%;
+  height: 750px;
+  width: 650px;
+  background-color: #1951a1;
+}
+.frog-size{
+    position: relative;
+    bottom: -10%;
+    right: 30%;
+     height: 100px;
+     width: 100px;
+}
+#last{
+  height: 30px;
+  width: 60px;
+  border: none;
+  background-color: rgba(243, 237, 237, 0.235);
+  color: white;
+  border-radius: 5px;
+  position: fixed;
+  opacity: 0.8;
+}
+/* .set{
+  position: relative;
+  left: 30%;
+} */
+
+#settings{
+  position: relative;
+}
+.toggle {
+  display: inline-block;
+  padding: 1px 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  color: rgba(230, 228, 228, 0.7);
+  cursor: pointer;
+  user-select: none;
+}
+#settings .tooltip {
+  display: none;
+  bottom: 30px;
+  left: 0px;
+  width: 275px;
+  max-width: 275px;
+  padding: 1em;
+  text-align: left;
+  z-index: 80;
+}
+#settings .tooltip:after {
+  top: auto;
+  bottom: -12px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #2c3e50;
+  border-bottom: none;
+}
+.tooltip:after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #2c3e50;
+}
+#settings .tooltip {
+  display: none;
+  bottom: 30px;
+  left: 0px;
+  width: 275px;
+  max-width: 275px;
+  padding: 1em;
+  text-align: left;
+  z-index: 80;
+}
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  max-width: 350px;
+  padding: 1em 1em;
+  background-color: #2c3e50;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  z-index: 60;
+}
+.credits {
+  margin-top: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(236, 234, 234, 0.6);
+}
+#sidebar {
+  width: 50%;
+  min-width: 300px;
+  position: relative;
+  padding: 2em;
+  background-color: #43A047;
+  font-size: 15px;
+}
+.translate{
+  color: aliceblue;
+  font-size:medium;
+}
